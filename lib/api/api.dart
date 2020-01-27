@@ -13,7 +13,7 @@ class APIRequest {
     var body = {"email": email, "password": password};
 
     final response = await http.post(
-        "https://collegesituation.firebrains.xyz/api/v1/student/login",
+        "https://thecollegesituation.herokuapp.com/api/v1/student/login",
         headers: headers,
         body: json.encode(body));
 

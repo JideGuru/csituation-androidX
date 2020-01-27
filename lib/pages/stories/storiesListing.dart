@@ -301,10 +301,9 @@ class _StoriesListingState extends State<StoriesListing> {
                                           topLeft: Radius.circular(8),
                                           topRight: Radius.circular(8)),
                                       child: CachedNetworkImage(
-                                        height: 120,
-                                        width: 300,
+                                        
                                         fit: BoxFit.cover,
-                                        imageUrl: storiesData[i].photo,
+                                        imageUrl: 'https://images.squarespace-cdn.com/content/v1/586d70dab3db2bba4122cdd5/1548015570912-QYPAHRBLWWQ59MD91WWL/ke17ZwdGBToddI8pDm48kFP16V_GhxU0YQtMf7cha4cUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcV0mY7w4Z9WoEQZI4wWMbc0rB_RKEIP67_IBJ8eq68R_XViBq5ym1xLIfDUXhtgqI/scholarship3.png',
                                         placeholder:
                                             (BuildContext context, String val) {
                                           return Container(
@@ -332,7 +331,7 @@ class _StoriesListingState extends State<StoriesListing> {
                                       child: Container(
                                         child: Center(
                                           child: Text(
-                                            'No photo',
+                                            'Photo loading',
                                             style: TextStyle(
                                               color: Colors.grey[100],
                                             ),

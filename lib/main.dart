@@ -16,7 +16,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'models/newUserModel.dart';
 import 'splash_widget.dart';
-import 'splash_widget.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

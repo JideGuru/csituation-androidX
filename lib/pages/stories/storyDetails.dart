@@ -172,7 +172,7 @@ class _StoryDetailsState extends State<StoryDetails> {
                         Stack(
                           children: <Widget>[
                             Container(
-                              height: 350,
+                              height: 230,
                               width: MediaQuery.of(context).size.width,
                               child: storyData.photo != null
                                   ? Stack(
@@ -180,34 +180,13 @@ class _StoryDetailsState extends State<StoryDetails> {
                                         Container(
                                           width:
                                               MediaQuery.of(context).size.width,
-                                          height: 350,
-                                          child: CachedNetworkImage(
-                                            imageUrl: storyData.photo,
-                                            placeholder: (BuildContext context,
-                                                String val) {
-                                              return Container(
-                                                color: Colors.grey[350],
-                                                child: Center(
-                                                  child:
-                                                      CircularProgressIndicator(),
-                                                ),
-                                              );
-                                            },
-                                            errorWidget: (BuildContext context,
-                                                String val, Object o) {
-                                              return Container(
-                                                color: Colors.grey[350],
-                                                child: Center(
-                                                  child: Text(
-                                                    'Could not load photo',
-                                                    style: TextStyle(
-                                                      color: Colors.grey[700],
-                                                    ),
-                                                  ),
-                                                ),
-                                              );
-                                            },
+                                          height: 230,
+                                          child: Image(
+                                            image: AssetImage(
+                                                'assets/images/story.gif'),
                                             fit: BoxFit.cover,
+                                            // colorBlendMode: BlendMode.color,
+                                            // color: Colors.white.withOpacity(0.8),
                                           ),
                                         ),
                                         Positioned(

@@ -168,41 +168,17 @@ class _ScholarshipDetailsState extends State<ScholarshipDetails> {
                         Stack(
                           children: <Widget>[
                             Container(
-                              height: 350,
+                              height: 300,
                               child: scholarshipData.photo.length > 0
                                   ? Stack(
                                       children: <Widget>[
                                         Container(
                                           width:
                                               MediaQuery.of(context).size.width,
-                                          height: 350,
-                                          child: CachedNetworkImage(
-                                            imageUrl: baseUrl+scholarshipData.photo,
-                                            placeholder: (BuildContext context,
-                                                String val) {
-                                              return Container(
-                                                color: Colors.grey[350],
-                                                child: Center(
-                                                  child:
-                                                      CircularProgressIndicator(),
-                                                ),
-                                              );
-                                            },
-                                            // errorWidget: (BuildContext context,
-                                            //     String val, Exception e) {
-                                            //   return Container(
-                                            //     color: Colors.grey[350],
-                                            //     child: Center(
-                                            //       child: Text(
-                                            //         'Could not load photo',
-                                            //         style: TextStyle(
-                                            //           color: Colors.grey[700],
-                                            //         ),
-                                            //       ),
-                                            //     ),
-                                            //   );
-                                            // },
-                                            fit: BoxFit.cover,
+                                          height: 300,
+                                          child: Image(
+                                            image: AssetImage('assets/images/scholarship.gif'),
+                                            fit: BoxFit.cover
                                           ),
                                         ),
                                         Positioned(
@@ -301,7 +277,7 @@ class _ScholarshipDetailsState extends State<ScholarshipDetails> {
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           color: Colors.grey[600],
-                                          fontSize: 20,
+                                          fontSize: 17,
                                         ),
                                       ),
                                     ),
