@@ -13,15 +13,21 @@ class APIRequest {
     var body = {"email": email, "password": password};
 
     final response = await http.post(
-        "https://thecollegesituation.herokuapp.com/api/v1/student/login",
-        headers: headers,
-        body: json.encode(body));
+      "https://thecollegesituation.herokuapp.com/api/v1/student/login",
+      headers: headers,
+      body: json.encode(body),
+    );
 
     try {
       if (response.statusCode == 200) {
         SharedPreferences prefs = await SharedPreferences.getInstance();
-        var data = UserModel.fromJson(json.decode(response.body));
-        prefs.setString('userData', json.encode(data.toJson()));
+        var data = UserModel.fromJson(
+          json.decode(response.body),
+        );
+        prefs.setString(
+          'userData',
+          json.encode(data.toJson()),
+        );
         return data;
       } else {
         if (response.body.toLowerCase().contains('invalid email')) {
