@@ -489,7 +489,7 @@ class _StoriesListingState extends State<StoriesListing> {
         centerTitle: true,
         title: Container(
           child: Text(
-            'EXPERIENCES',
+            'STORIES & TIPS',
             style: TextStyle(
               fontSize: 16,
             ),

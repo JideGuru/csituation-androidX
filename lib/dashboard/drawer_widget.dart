@@ -165,7 +165,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 ]),
                 _ItemWidget('Visa & Immigration', [
                   _Item(
-                      'Share / Read Stories',
+                      'Share / Read Stories & Tips',
                       FontAwesomeIcons.creativeCommonsShare,
                       () => Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (BuildContext context) =>

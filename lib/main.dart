@@ -12,6 +12,7 @@ import 'package:college_situation/api/paymentBackend.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'models/newUserModel.dart';
@@ -30,6 +31,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: MyColors.blue,
+        textTheme: GoogleFonts.muliTextTheme(
+          Theme.of(context).textTheme,
+        ),
       ),
       home: SplashWidget(),
     );

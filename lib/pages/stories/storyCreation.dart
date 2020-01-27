@@ -113,10 +113,10 @@ class _StoryCreationState extends State<StoryCreation> {
       Navigator.pop(context);
       showInSnackBar('Please fix the errors in red before submitting.');
     } else {
-      // SharedPreferences prefs = await SharedPreferences.getInstance();
+      SharedPreferences prefs = await SharedPreferences.getInstance();
 
-      // var t = prefs.getString('userData');
-      //var userData = UserModel.fromJson(json.decode(t));
+      var t = prefs.getString('userData');
+      var userData = UserModel.fromJson(json.decode(t));
 
       form.save();
       storyFormData.owner = Owner.fromJson(jsonDecode(currentUserData)).sId;

@@ -79,7 +79,8 @@ class _DashboardWidgetState extends State<DashboardWidget>
                         width: 8,
                       ),
                       Text(
-                        '${widget?.data?.user?.firstName ?? ''} ${widget?.data?.user?.lastName ?? ''}'.toUpperCase(),
+                        '${widget?.data?.user?.firstName ?? ''} ${widget?.data?.user?.lastName ?? ''}'
+                            .toUpperCase(),
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -107,13 +108,17 @@ class _DashboardWidgetState extends State<DashboardWidget>
                   title: 'SCHOLARSHIPS',
                   desc:
                       'Explore several scholarships available for undergraduate, postgraduate & PhD students',
-                  callbackClass: ScholarshipListing(data: widget.data,),
+                  callbackClass: ScholarshipListing(
+                    data: widget.data,
+                  ),
                 ),
                 new DashBoardItem(
                   title: 'HELPFUL TIPS & EXPERIENCES',
                   desc:
                       'Read experiences and helpful tips that\'ll guide you during your application process',
-                  callbackClass: StoriesListing(data: widget.data,),
+                  callbackClass: StoriesListing(
+                    data: widget.data,
+                  ),
                 ),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.13,
@@ -292,8 +297,8 @@ class DashBoardItem extends StatelessWidget {
                         textAlign: TextAlign.left,
                         style: TextStyle(
                             color: Colors.black87.withOpacity(0.7),
-                            fontWeight: FontWeight.w400,
-                            fontSize: 17),
+                            fontWeight: FontWeight.w600,
+                            fontSize: 18),
                       ),
                       const SizedBox(
                         height: 10,
@@ -303,8 +308,8 @@ class DashBoardItem extends StatelessWidget {
                         textAlign: TextAlign.left,
                         style: TextStyle(
                             color: Colors.black54,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 13),
+                            fontWeight: FontWeight.w500,
+                            fontSize: 14),
                       ),
                     ],
                   ),
