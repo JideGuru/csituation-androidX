@@ -144,7 +144,8 @@ class SplashState extends State<Splash> {
         if (value) {
           Navigator.of(context).pushAndRemoveUntil(
               MaterialPageRoute(
-                  builder: (BuildContext context) => LoginWidget()),
+                builder: (BuildContext context) => LoginWidget(),
+              ),
               (Route<dynamic> route) => false);
         }
       });

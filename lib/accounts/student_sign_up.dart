@@ -148,8 +148,10 @@ class _StudentSignUpWidgetState extends State<StudentSignUpWidget>
                               ),
                               FlatButton(
                                   onPressed: () => Navigator.of(context).push(
-                                      new MaterialPageRoute(
-                                          builder: (_) => LoginWidget())),
+                                        new MaterialPageRoute(
+                                          builder: (_) => LoginWidget(),
+                                        ),
+                                      ),
                                   child: Text('Login Now',
                                       style: TextStyle(
                                           fontSize: 13,
@@ -196,8 +198,7 @@ class _StudentSignUpWidgetState extends State<StudentSignUpWidget>
       print(response.body);
       var responseBody = jsonDecode(response.body);
       bool loggedIn = responseBody['success'] ??= false;
-       var data = await APIRequest.login(email: email, password: password);
-
+      var data = await APIRequest.login(email: email, password: password);
 
       setState(() => loading = false);
 
