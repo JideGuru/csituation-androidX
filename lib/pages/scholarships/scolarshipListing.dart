@@ -418,59 +418,36 @@ class _ScholarshipListingState extends State<ScholarshipListing> {
                             child: Column(
                               children: <Widget>[
                                 Container(
-                                  child: allScholarshipData[i].photo == null
-                                      ? ClipRRect(
-                                          borderRadius: BorderRadius.only(
-                                              topLeft: Radius.circular(8),
-                                              topRight: Radius.circular(8)),
-                                          child: CachedNetworkImage(
-                                            height: 100,
-                                            width: 200,
-                                            fit: BoxFit.cover,
-                                            imageUrl:
-                                                'https://res.cloudinary.com/favourori/image/upload/v1580111197/schlisting.png',
-                                            placeholder: (BuildContext context,
-                                                String val) {
-                                              return Container(
-                                                height: 80,
-                                                decoration: BoxDecoration(
-                                                  color: Colors.grey[400],
-                                                ),
-                                                child: Center(
-                                                    child:
-                                                        CircularProgressIndicator()),
-                                              );
-                                            },
-                                            // errorWidget: (BuildContext context,
-                                            //     String val, Exception e) {
-                                            //   return Image.asset(
-                                            //     'assets/images/placeholder.png',
-                                            //     fit: BoxFit.cover,
-                                            //   );
-                                            // },
-                                          ),
-                                        )
-                                      : ClipRRect(
-                                          borderRadius: BorderRadius.only(
-                                              topLeft: Radius.circular(8),
-                                              topRight: Radius.circular(8)),
-                                          child: Container(
-                                            child: Center(
-                                              child: Text(
-                                                'No photo',
-                                                style: TextStyle(
-                                                  color: Colors.grey[100],
-                                                ),
-                                              ),
-                                            ),
-                                            decoration: BoxDecoration(
-                                              color: Colors.grey[400],
-                                            ),
-                                            height: 100,
-                                            width: 300,
-                                          ),
+                                    child: ClipRRect(
+                                  borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(8),
+                                      topRight: Radius.circular(8)),
+                                  child: CachedNetworkImage(
+                                    height: 100,
+                                    width: 200,
+                                    fit: BoxFit.cover,
+                                    imageUrl:
+                                        'https://res.cloudinary.com/favourori/image/upload/v1580111197/schlisting.png',
+                                    placeholder:
+                                        (BuildContext context, String val) {
+                                      return Container(
+                                        height: 80,
+                                        decoration: BoxDecoration(
+                                          color: Colors.grey[400],
                                         ),
-                                ),
+                                        child: Center(
+                                            child: CircularProgressIndicator()),
+                                      );
+                                    },
+                                    // errorWidget: (BuildContext context,
+                                    //     String val, Exception e) {
+                                    //   return Image.asset(
+                                    //     'assets/images/placeholder.png',
+                                    //     fit: BoxFit.cover,
+                                    //   );
+                                    // },
+                                  ),
+                                )),
                                 Expanded(
                                   child: Container(
                                     margin:

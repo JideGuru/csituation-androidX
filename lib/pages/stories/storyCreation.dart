@@ -29,7 +29,7 @@ class StoryCreation extends StatefulWidget {
 
 class _StoryCreationState extends State<StoryCreation> {
   StoryFormData storyFormData = StoryFormData();
-  File attachedPhoto;
+  //File attachedPhoto;
   Forms forms = Forms();
   bool _autovalidate = false;
   List<Map> catList = [];

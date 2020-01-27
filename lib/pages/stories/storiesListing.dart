@@ -294,57 +294,34 @@ class _StoriesListingState extends State<StoriesListing> {
                         child: Column(
                           children: <Widget>[
                             Container(
-                              child: storiesData[i].photo == null
-                                  ? ClipRRect(
-                                      borderRadius: BorderRadius.only(
-                                          topLeft: Radius.circular(8),
-                                          topRight: Radius.circular(8)),
-                                      child: CachedNetworkImage(
-                                        fit: BoxFit.cover,
-                                        //height: 100,
-                                        imageUrl:
-                                            'https://res.cloudinary.com/favourori/image/upload/v1580111695/story.jpg',
-                                        placeholder:
-                                            (BuildContext context, String val) {
-                                          return Container(
-                                            decoration: BoxDecoration(
-                                              color: Colors.grey[400],
-                                            ),
-                                            child: Center(
-                                                child:
-                                                    CircularProgressIndicator()),
-                                          );
-                                        },
-                                        // errorWidget: (BuildContext context,
-                                        //     String val, Exception e) {
-                                        //   return Image.asset(
-                                        //     'assets/images/placeholder.png',
-                                        //     fit: BoxFit.cover,
-                                        //   );
-                                        // },
-                                      ),
-                                    )
-                                  : ClipRRect(
-                                      borderRadius: BorderRadius.only(
-                                          topLeft: Radius.circular(8),
-                                          topRight: Radius.circular(8)),
-                                      child: Container(
-                                        child: Center(
-                                          child: Text(
-                                            'Photo loading',
-                                            style: TextStyle(
-                                              color: Colors.grey[100],
-                                            ),
-                                          ),
-                                        ),
-                                        decoration: BoxDecoration(
-                                          color: Colors.grey[400],
-                                        ),
-                                        height: 100,
-                                        width: 300,
-                                      ),
+                                child: ClipRRect(
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(8),
+                                  topRight: Radius.circular(8)),
+                              child: CachedNetworkImage(
+                                fit: BoxFit.cover,
+                                //height: 100,
+                                imageUrl:
+                                    'https://res.cloudinary.com/favourori/image/upload/v1580111695/story.jpg',
+                                placeholder:
+                                    (BuildContext context, String val) {
+                                  return Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.grey[400],
                                     ),
-                            ),
+                                    child: Center(
+                                        child: CircularProgressIndicator()),
+                                  );
+                                },
+                                // errorWidget: (BuildContext context,
+                                //     String val, Exception e) {
+                                //   return Image.asset(
+                                //     'assets/images/placeholder.png',
+                                //     fit: BoxFit.cover,
+                                //   );
+                                // },
+                              ),
+                            )),
                             Expanded(
                               child: Container(
                                 margin: EdgeInsets.symmetric(
