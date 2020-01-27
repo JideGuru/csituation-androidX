@@ -168,67 +168,49 @@ class _ScholarshipDetailsState extends State<ScholarshipDetails> {
                         Stack(
                           children: <Widget>[
                             Container(
-                              height: 300,
-                              child: scholarshipData.photo == null
-                                  ? Stack(
-                                      children: <Widget>[
-                                        Container(
-                                          width:
-                                              MediaQuery.of(context).size.width,
-                                          height: 300,
-                                          child: Image(
-                                              image: AssetImage(
-                                                  'assets/images/scholarship.gif'),
-                                              fit: BoxFit.cover),
-                                        ),
-                                        Positioned(
-                                          bottom: 0,
-                                          child: Container(
-                                            height: MediaQuery.of(context)
-                                                    .size
-                                                    .height *
+                                height: 300,
+                                child: Stack(
+                                  children: <Widget>[
+                                    Container(
+                                      width: MediaQuery.of(context).size.width,
+                                      height: 300,
+                                      child: Image(
+                                          image: AssetImage(
+                                              'assets/images/scholarship.gif'),
+                                          fit: BoxFit.cover),
+                                    ),
+                                    Positioned(
+                                      bottom: 0,
+                                      child: Container(
+                                        height:
+                                            MediaQuery.of(context).size.height *
                                                 0.20,
-                                            width: MediaQuery.of(context)
-                                                .size
-                                                .width,
-                                            decoration: BoxDecoration(
-                                                gradient: LinearGradient(
-                                                    stops: [
-                                                      0.1,
-                                                      0.2,
-                                                      0.4,
-                                                      0.7,
-                                                    ],
-                                                    begin: Alignment.topCenter,
-                                                    end: Alignment.bottomCenter,
-                                                    colors: [
-                                                      Color(0xCC000000)
-                                                          .withOpacity(0.0),
-                                                      Color(0xCC000000)
-                                                          .withOpacity(0.2),
-                                                      Color(0xCC000000)
-                                                          .withOpacity(0.4),
-                                                      Color(0xCC000000)
-                                                          .withOpacity(0.6),
-                                                    ])),
-                                          ),
-                                        ),
-                                      ],
-                                    )
-                                  : Container(
-                                      child: Center(
-                                        child: Text(
-                                          'No photo',
-                                          style: TextStyle(
-                                            color: Colors.grey[100],
-                                          ),
-                                        ),
-                                      ),
-                                      decoration: BoxDecoration(
-                                        color: Colors.grey[400],
+                                        width:
+                                            MediaQuery.of(context).size.width,
+                                        decoration: BoxDecoration(
+                                            gradient: LinearGradient(
+                                                stops: [
+                                                  0.1,
+                                                  0.2,
+                                                  0.4,
+                                                  0.7,
+                                                ],
+                                                begin: Alignment.topCenter,
+                                                end: Alignment.bottomCenter,
+                                                colors: [
+                                                  Color(0xCC000000)
+                                                      .withOpacity(0.0),
+                                                  Color(0xCC000000)
+                                                      .withOpacity(0.2),
+                                                  Color(0xCC000000)
+                                                      .withOpacity(0.4),
+                                                  Color(0xCC000000)
+                                                      .withOpacity(0.6),
+                                                ])),
                                       ),
                                     ),
-                            ),
+                                  ],
+                                )),
                             Positioned(
                               bottom: 30,
                               child: scholarshipHeader(),

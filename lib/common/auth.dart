@@ -17,7 +17,7 @@ class StoryFormData {
 
   StoryFormData(
       {this.title,
-      this.photo,
+      //this.photo,
       this.description,
       this.featured,
       this.category,

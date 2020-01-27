@@ -174,8 +174,7 @@ class _StoryDetailsState extends State<StoryDetails> {
                             Container(
                               height: 230,
                               width: MediaQuery.of(context).size.width,
-                              child: storyData.photo == null
-                                  ? Stack(
+                              child: Stack(
                                       children: <Widget>[
                                         Container(
                                           width:
@@ -223,19 +222,7 @@ class _StoryDetailsState extends State<StoryDetails> {
                                         ),
                                       ],
                                     )
-                                  : Container(
-                                      child: Center(
-                                        child: Text(
-                                          'No photo',
-                                          style: TextStyle(
-                                            color: Colors.grey[100],
-                                          ),
-                                        ),
-                                      ),
-                                      decoration: BoxDecoration(
-                                        color: Colors.grey[400],
-                                      ),
-                                    ),
+                                  
                             ),
                             Positioned(
                               bottom: 30,
