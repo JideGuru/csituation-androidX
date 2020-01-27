@@ -169,7 +169,7 @@ class _ScholarshipDetailsState extends State<ScholarshipDetails> {
                           children: <Widget>[
                             Container(
                               height: 300,
-                              child: scholarshipData.photo.length > 0
+                              child: scholarshipData.photo == null
                                   ? Stack(
                                       children: <Widget>[
                                         Container(
@@ -177,9 +177,9 @@ class _ScholarshipDetailsState extends State<ScholarshipDetails> {
                                               MediaQuery.of(context).size.width,
                                           height: 300,
                                           child: Image(
-                                            image: AssetImage('assets/images/scholarship.gif'),
-                                            fit: BoxFit.cover
-                                          ),
+                                              image: AssetImage(
+                                                  'assets/images/scholarship.gif'),
+                                              fit: BoxFit.cover),
                                         ),
                                         Positioned(
                                           bottom: 0,

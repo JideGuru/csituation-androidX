@@ -294,7 +294,7 @@ class _StoriesListingState extends State<StoriesListing> {
                         child: Column(
                           children: <Widget>[
                             Container(
-                              child: storiesData[i].photo != null
+                              child: storiesData[i].photo == null
                                   ? ClipRRect(
                                       borderRadius: BorderRadius.only(
                                           topLeft: Radius.circular(8),

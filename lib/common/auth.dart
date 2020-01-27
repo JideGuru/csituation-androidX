@@ -82,7 +82,7 @@ class Forms {
       'featured': storyFormData.featured ?? 'no',
       'category': storyFormData.category,
       'owner': storyFormData.owner,
-      'photo': storyFormData.photo,
+      //'photo': storyFormData.photo,
     };
 
     var headers = {

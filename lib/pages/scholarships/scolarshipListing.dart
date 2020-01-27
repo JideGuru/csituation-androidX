@@ -418,7 +418,7 @@ class _ScholarshipListingState extends State<ScholarshipListing> {
                             child: Column(
                               children: <Widget>[
                                 Container(
-                                  child: allScholarshipData[i].photo != null
+                                  child: allScholarshipData[i].photo == null
                                       ? ClipRRect(
                                           borderRadius: BorderRadius.only(
                                               topLeft: Radius.circular(8),

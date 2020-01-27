@@ -174,7 +174,7 @@ class _StoryDetailsState extends State<StoryDetails> {
                             Container(
                               height: 230,
                               width: MediaQuery.of(context).size.width,
-                              child: storyData.photo != null
+                              child: storyData.photo == null
                                   ? Stack(
                                       children: <Widget>[
                                         Container(

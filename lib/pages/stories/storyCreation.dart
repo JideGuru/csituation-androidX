@@ -41,7 +41,7 @@ class _StoryCreationState extends State<StoryCreation> {
   String secondResponse;
   String token;
   Map catDataMap;
-  String encodedPhoto;
+  //String encodedPhoto;
   StoriesCatModel catData;
   List<StoryCatData> storyCatData = [];
 
@@ -113,9 +113,9 @@ class _StoryCreationState extends State<StoryCreation> {
       Navigator.pop(context);
       showInSnackBar('Please fix the errors in red before submitting.');
     } else {
-     // SharedPreferences prefs = await SharedPreferences.getInstance();
+      // SharedPreferences prefs = await SharedPreferences.getInstance();
 
-     // var t = prefs.getString('userData');
+      // var t = prefs.getString('userData');
       //var userData = UserModel.fromJson(json.decode(t));
 
       form.save();
@@ -137,23 +137,23 @@ class _StoryCreationState extends State<StoryCreation> {
     }
   }
 
-  getImage() async {
-    File image;
-    try {
-      image = await ImagePicker.pickImage(source: ImageSource.gallery);
-    } catch (e) {
-      print(e.message);
-    } finally {
-      if (image != null) {
-        setState(() {
-          encodedPhoto = base64Encode(image.readAsBytesSync());
-          String mtype = MimeTypeResolver().lookup(image.path);
-          storyFormData.photo = 'data:$mtype;base64,$encodedPhoto';
-          attachedPhoto = image;
-        });
-      }
-    }
-  }
+  // getImage() async {
+  //   File image;
+  //   try {
+  //     image = await ImagePicker.pickImage(source: ImageSource.gallery);
+  //   } catch (e) {
+  //     print(e.message);
+  //   } finally {
+  //     if (image != null) {
+  //       setState(() {
+  //         encodedPhoto = base64Encode(image.readAsBytesSync());
+  //         String mtype = MimeTypeResolver().lookup(image.path);
+  //         storyFormData.photo = 'data:$mtype;base64,$encodedPhoto';
+  //         attachedPhoto = image;
+  //       });
+  //     }
+  //   }
+  // }
 
   Future<bool> willPop() async {
     showDialog(
@@ -251,50 +251,50 @@ class _StoryCreationState extends State<StoryCreation> {
                       ),
                     ),
                   ),
-                  InkResponse(
-                    onTap: getImage,
-                    child: Container(
-                      margin: EdgeInsets.only(bottom: 20, right: 10, left: 10),
-                      width: MediaQuery.of(context).size.width,
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 10, vertical: 16),
-                      child: Row(
-                        children: <Widget>[
-                          new Container(
-                            margin: EdgeInsets.only(right: 12),
-                            child: new Icon(
-                              Icons.camera_alt,
-                              size: 16,
-                            ),
-                          ),
-                          Expanded(
-                            child: Container(
-                              child: attachedPhoto != null
-                                  ? Text(
-                                      attachedPhoto.path.split('/').last,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                        color: Colors.grey,
-                                      ),
-                                    )
-                                  : Text(
-                                      'Select photo...',
-                                      style: TextStyle(
-                                        color: Colors.grey,
-                                      ),
-                                    ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.grey,
-                        ),
-                        borderRadius: BorderRadius.circular(5),
-                      ),
-                    ),
-                  ),
+                  // InkResponse(
+                  //   onTap: getImage,
+                  //   child: Container(
+                  //     margin: EdgeInsets.only(bottom: 20, right: 10, left: 10),
+                  //     width: MediaQuery.of(context).size.width,
+                  //     padding:
+                  //         EdgeInsets.symmetric(horizontal: 10, vertical: 16),
+                  //     child: Row(
+                  //       children: <Widget>[
+                  //         new Container(
+                  //           margin: EdgeInsets.only(right: 12),
+                  //           child: new Icon(
+                  //             Icons.camera_alt,
+                  //             size: 16,
+                  //           ),
+                  //         ),
+                  //         Expanded(
+                  //           child: Container(
+                  //             child: attachedPhoto != null
+                  //                 ? Text(
+                  //                     attachedPhoto.path.split('/').last,
+                  //                     overflow: TextOverflow.ellipsis,
+                  //                     style: TextStyle(
+                  //                       color: Colors.grey,
+                  //                     ),
+                  //                   )
+                  //                 : Text(
+                  //                     'Select photo...',
+                  //                     style: TextStyle(
+                  //                       color: Colors.grey,
+                  //                     ),
+                  //                   ),
+                  //           ),
+                  //         ),
+                  //       ],
+                  //     ),
+                  //     decoration: BoxDecoration(
+                  //       border: Border.all(
+                  //         color: Colors.grey,
+                  //       ),
+                  //       borderRadius: BorderRadius.circular(5),
+                  //     ),
+                  //   ),
+                  // ),
                   Container(
                     margin: EdgeInsets.only(bottom: 20, right: 10, left: 10),
                     child: DropdownButtonFormField<String>(
