@@ -285,9 +285,8 @@ class _StoriesListingState extends State<StoriesListing> {
                     onTap: () => Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (BuildContext context) => StoryDetails(
-                          id: storiesData[i].sId,
-                          ownerId: storiesData[i].owner.sId
-                        ),
+                            id: storiesData[i].sId,
+                            ownerId: storiesData[i].owner.sId),
                       ),
                     ),
                     child: Card(
@@ -301,9 +300,10 @@ class _StoriesListingState extends State<StoriesListing> {
                                           topLeft: Radius.circular(8),
                                           topRight: Radius.circular(8)),
                                       child: CachedNetworkImage(
-                                        
                                         fit: BoxFit.cover,
-                                        imageUrl: 'https://images.squarespace-cdn.com/content/v1/586d70dab3db2bba4122cdd5/1548015570912-QYPAHRBLWWQ59MD91WWL/ke17ZwdGBToddI8pDm48kFP16V_GhxU0YQtMf7cha4cUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcV0mY7w4Z9WoEQZI4wWMbc0rB_RKEIP67_IBJ8eq68R_XViBq5ym1xLIfDUXhtgqI/scholarship3.png',
+                                        //height: 100,
+                                        imageUrl:
+                                            'https://res.cloudinary.com/favourori/image/upload/v1580111695/story.jpg',
                                         placeholder:
                                             (BuildContext context, String val) {
                                           return Container(
@@ -348,11 +348,14 @@ class _StoriesListingState extends State<StoriesListing> {
                             Expanded(
                               child: Container(
                                 margin: EdgeInsets.symmetric(
-                                    horizontal: 12,),
+                                  horizontal: 12,
+                                ),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
-                                    SizedBox(height: 10,),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
                                     Container(
                                       margin: EdgeInsets.only(bottom: 10),
                                       child: Row(
