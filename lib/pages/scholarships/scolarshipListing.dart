@@ -20,7 +20,6 @@ import 'package:college_situation/common/my_strings.dart';
 
 var baseUrl = Strings.imageDomain;
 
-
 class ScholarshipListing extends StatefulWidget {
   final UserModel data;
 
@@ -223,32 +222,11 @@ class _ScholarshipListingState extends State<ScholarshipListing> {
                                   Container(
                                     width: MediaQuery.of(context).size.width,
                                     height: 350,
-                                    child: new CachedNetworkImage(
-                                      imageUrl: baseUrl+ featuredContents[i].photo,
-                                      placeholder:
-                                          (BuildContext context, String val) {
-                                        return Container(
-                                          color: Colors.grey[350],
-                                          height: 350,
-                                          child: Center(
-                                            child: CircularProgressIndicator(),
-                                          ),
-                                        );
-                                      },
-                                      errorWidget: (BuildContext context,
-                                          String val, Object o) {
-                                        return Container(
-                                          color: Colors.grey[350],
-                                          child: Center(
-                                            child: Text(
-                                              'Could not load photo',
-                                              style: TextStyle(
-                                                color: Colors.grey[700],
-                                              ),
-                                            ),
-                                          ),
-                                        );
-                                      },
+                                    child: Image(
+                                      image: AssetImage(
+                                        'assets/images/schlisting.png',
+                                      ),
+                                      height: 350,
                                       fit: BoxFit.cover,
                                     ),
                                   ),
@@ -435,7 +413,6 @@ class _ScholarshipListingState extends State<ScholarshipListing> {
                                   )),
                         ),
                         child: Card(
-                          
                           child: Container(
                             height: MediaQuery.of(context).size.height * 0.29,
                             child: Column(
@@ -451,7 +428,7 @@ class _ScholarshipListingState extends State<ScholarshipListing> {
                                             width: 200,
                                             fit: BoxFit.cover,
                                             imageUrl:
-                                               baseUrl+ allScholarshipData[i].photo,
+                                                'https://res.cloudinary.com/favourori/image/upload/v1580111197/schlisting.png',
                                             placeholder: (BuildContext context,
                                                 String val) {
                                               return Container(
@@ -496,9 +473,8 @@ class _ScholarshipListingState extends State<ScholarshipListing> {
                                 ),
                                 Expanded(
                                   child: Container(
-                            
-                                    margin: EdgeInsets.symmetric(
-                                        horizontal: 12),
+                                    margin:
+                                        EdgeInsets.symmetric(horizontal: 12),
                                     child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
@@ -531,7 +507,8 @@ class _ScholarshipListingState extends State<ScholarshipListing> {
                                           ),
                                         ),
                                         Container(
-                                          margin: EdgeInsets.only(bottom: 7, top:3),
+                                          margin: EdgeInsets.only(
+                                              bottom: 7, top: 3),
                                           height: 29,
                                           child: Text(
                                             allScholarshipData[i].title,
@@ -654,7 +631,7 @@ class _ScholarshipListingState extends State<ScholarshipListing> {
         centerTitle: true,
         title: Container(
           child: Text(
-            'SCHOLARSHIP',
+            'SCHOLARSHIPS',
             style: TextStyle(
               fontSize: 16,
             ),
